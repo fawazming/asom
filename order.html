@@ -115,17 +115,39 @@
                                                 <label for="name" class="font-semibold">Name:</label>
                                                 <div class="form-icon relative mt-2">
                                                     <i data-feather="user" class="w-4 h-4 absolute top-3 left-4"></i>
-                                                    <input name="name" id="name" type="text" class="form-input pl-11" placeholder="Name :">
+                                                    <input required name="name" id="name" type="text" class="form-input pl-11" placeholder="Name :">
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="lg:col-span-6 mb-5">
                                             <div class="text-left">
-                                                <label for="email" class="font-semibold">Your Email:</label>
+                                                <label for="email" class="font-semibold">Email:</label>
                                                 <div class="form-icon relative mt-2">
                                                     <i data-feather="mail" class="w-4 h-4 absolute top-3 left-4"></i>
-                                                    <input name="email" id="email" type="email" class="form-input pl-11" placeholder="Email :">
+                                                    <input required name="email" id="email" type="email" class="form-input pl-11" placeholder="Email :">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid lg:grid-cols-12 lg:gap-6">
+                                        <div class="lg:col-span-6 mb-5">
+                                            <div class="text-left">
+                                                <label for="name" class="font-semibold">Quatity:</label>
+                                                <div class="form-icon relative mt-2">
+                                                    <i data-feather="hash" class="w-4 h-4 absolute top-3 left-4"></i>
+                                                    <input required name="name" id="name" type="number" ran class="form-input pl-11" min="1" max="10" placeholder="Between 1 & 10">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="lg:col-span-6 mb-5">
+                                            <div class="text-left">
+                                                <label for="email" class="font-semibold">Capacity:</label>
+                                                <div class="form-icon relative mt-2">
+                                                    <i data-feather="cloud-lightning" class="w-4 h-4 absolute top-3 left-4"></i>
+                                                    <input required name="email" id="email" disabled type="text" class="form-input pl-11" placeholder="630A">
                                                 </div>
                                             </div>
                                         </div>
@@ -134,20 +156,30 @@
                                     <div class="grid grid-cols-1">
                                         <div class="mb-5">
                                             <div class="text-left">
-                                                <label for="subject" class="font-semibold">Your Phone Number:</label>
+                                                <label for="subject" class="font-semibold">Phone Number:</label>
                                                 <div class="form-icon relative mt-2">
                                                     <i data-feather="phone" class="w-4 h-4 absolute top-3 left-4"></i>
-                                                    <input type="phone" name="subject" id="subject" class="form-input pl-11" placeholder="Phone (Whatsapp) :">
+                                                    <input required type="phone" name="subject" id="subject" class="form-input pl-11" placeholder="Phone">
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="mb-5">
                                             <div class="text-left">
-                                                <label for="comments" class="font-semibold">Your Address:</label>
+                                                <label for="subject" class="font-semibold">Alternative Phone Number:</label>
                                                 <div class="form-icon relative mt-2">
-                                                    <i data-feather="pin" class="w-4 h-4 absolute top-3 left-4"></i>
-                                                    <textarea name="comments" id="comments" class="form-input pl-11 h-28" placeholder="Address :"></textarea>
+                                                    <i data-feather="phone" class="w-4 h-4 absolute top-3 left-4"></i>
+                                                    <input required type="phone" name="subject" id="subject" class="form-input pl-11" placeholder="Alternative Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <div class="text-left">
+                                                <label for="comments" class="font-semibold">Address:</label>
+                                                <div class="form-icon relative mt-2">
+                                                    <i data-feather="map-pin" class="w-4 h-4 absolute top-3 left-4"></i>
+                                                    <textarea required name="comments" id="comments" class="form-input pl-11 h-28" placeholder="Address :"></textarea>
                                                 </div>
                                             </div>
                                         </div>
