@@ -493,6 +493,18 @@
 
         <!-- </section>end section -->
         <!-- End Section-->
+                <!-- Start -->
+        <section class="relative md:py-24 py-16">
+            <div class="container md:mt-24 mt-16">
+                <div class="grid grid-cols-1 text-center">
+                    <h6 class="text-indigo-600 text-5xl mb-2">Hurry Now!</h6>
+                    <h3 class="mb-4 md:text-2xl md:leading-normal text-xl leading-normal font-medium">Enjoy 30% discount if you order today</h3>
+
+                    <p class="text-red-600 text-5xl max-w-xl mx-auto" id="countdown"></p>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
 
         <div id="people" class="my-12"></div>
 
@@ -599,14 +611,6 @@
                         <div class="md:text-left text-center">
                             <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> AsomEngineering. Design with ❤️ by <a href="https://rayyantech.ng/" target="_blank" class="text-reset">RayyanTech</a>.</p>
                         </div>
-
-                        <ul class="list-none md:text-right text-center mt-6 md:mt-0">
-                            <li class="inline"><a href=""><img src="assets/images/payments/american-ex.png" class="max-h-6 inline" title="American Express" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/discover.png" class="max-h-6 inline" title="Discover" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/master-card.png" class="max-h-6 inline" title="Master Card" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/paypal.png" class="max-h-6 inline" title="Paypal" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/visa.png" class="max-h-6 inline" title="Visa" alt=""></a></li>
-                        </ul>
                     </div><!--end grid-->
                 </div><!--end container-->
             </div>
@@ -624,6 +628,22 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <script src="assets/js/plugins.init.js"></script>
         <script src="assets/js/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.3/src/easytimer.min.js"></script>
+        <script>
+            var timer = new Timer();
+            timer.start({countdown: true, startValues: [0,0,59,23,0]});
+
+            // $('#countdown .values').html(timer.getTimeValues().toString());
+            document.querySelector('#countdown').innerHTML= timer.getTimeValues().toString();
+
+            timer.addEventListener('secondsUpdated', function (e) {
+                document.querySelector('#countdown').innerHTML = timer.getTimeValues().toString();
+            });
+
+            timer.addEventListener('targetAchieved', function (e) {
+                document.querySelector('#countdown').innerHTML = `Time Up!!!`;
+            });
+        </script>
         <!-- JAVASCRIPTS -->
     </body>
 </html>
